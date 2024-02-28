@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Employee Form</h2>
+    <form action="EmployeeServlet" method="post">
+        <label for="employeeId">Employee ID:</label><br>
+        <input type="number" id="employeeId" name="employeeId" required><br>
+        
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" required><br>
+        
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br>
+        
+        <label for="position">Position:</label><br>
+        <input type="text" id="position" name="position" required><br>
+        
+        <label for="salary">Salary:</label><br>
+        <input type="number" id="salary" name="salary" step="0.01" min="0" required><br>
+        
+        <input type="submit" value="Submit">
+</body>
+</html>

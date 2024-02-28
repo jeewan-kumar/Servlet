@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Computer Form</h2>
+    <form action="computerservlet" method="post">
+        <label for="computerId">Computer ID:</label><br>
+        <input type="number" id="computerId" name="id" required><br>
+        
+        <label for="brand">Brand:</label><br>
+        <input type="text" id="brand" name="brand" required><br>
+        
+        <label for="processor">Processor:</label><br>
+        <input type="text" id="processor" name="processor" required><br>
+        
+        <label for="ram">RAM:</label><br>
+        <input type="number" id="ram" name="ram" required><br>
+        
+        <label for="operatingSystem">Operating System:</label><br>
+        <input type="text" id="operatingSystem" name="operatingSystem" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

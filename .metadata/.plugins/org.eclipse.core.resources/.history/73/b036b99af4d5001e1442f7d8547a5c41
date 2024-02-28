@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Flight Form</h2>
+    <form action="FlightServlet" method="post">
+        <label for="flightId">Flight ID:</label><br>
+        <input type="number" id="flightId" name="flightId" required><br>
+        
+        <label for="airline">Airline:</label><br>
+        <input type="text" id="airline" name="airline" required><br>
+        
+        <label for="origin">Origin:</label><br>
+        <input type="text" id="origin" name="origin" required><br>
+        
+        <label for="destination">Destination:</label><br>
+        <input type="text" id="destination" name="destination" required><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" step="0.01" min="0" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

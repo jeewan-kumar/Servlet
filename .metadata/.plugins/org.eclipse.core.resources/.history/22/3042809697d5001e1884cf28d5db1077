@@ -1,0 +1,21 @@
+package com.Book;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class Book extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int bookid = Integer.parseInt(req.getParameter("bookid"));
+        String title = req.getParameter("title");
+        String author = req.getParameter("author");
+        int pages = Integer.parseInt(req.getParameter("pages"));
+        String genre = req.getParameter("genre");
+	}
+	
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.1 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v10.1 Server at localhost" name="Tomcat v10.1 Server at localhost" runtime-id="apache-tomcat-10.1.15" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="12">
+    <list key="modules" value0="Book::org.eclipse.jst.j2ee.server:Book::jst.web::2.3" value1="Car::org.eclipse.jst.j2ee.server:Car::jst.web::2.3" value2="Computer::org.eclipse.jst.j2ee.server:Computer::jst.web::2.3" value3="Customer::org.eclipse.jst.j2ee.server:Customer::jst.web::2.3" value4="Employee::org.eclipse.jst.j2ee.server:Employee::jst.web::2.3" value5="Flight::org.eclipse.jst.j2ee.server:Flight::jst.web::2.3" value6="Movie::org.eclipse.jst.j2ee.server:Movie::jst.web::2.3" value7="Product::org.eclipse.jst.j2ee.server:Product::jst.web::2.3" value8="Restaurant::org.eclipse.jst.j2ee.server:Restaurant::jst.web::2.3" value9="Student::org.eclipse.jst.j2ee.server:Student::jst.web::2.3"/>
+  </server>
+</servers>

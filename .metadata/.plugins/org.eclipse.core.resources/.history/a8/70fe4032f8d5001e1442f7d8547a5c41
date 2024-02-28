@@ -1,0 +1,65 @@
+package com.product;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class Product extends HttpServlet{
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int id = Integer.parseInt(req.getParameter("id"));
+        String productname = req.getParameter("title");
+        String description = req.getParameter("director");
+        int price = Integer.parseInt(req.getParameter("releaseyear")); 
+        String quantity = req.getParameter("genre");
+           
+        
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/student", "postgres", "root");
+            String insert = "insert into products (movieid, title, director, releaseyear, genre) values (?, ?, ?, ?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(insert);
+            preparedStatement.setInt(1, id);
+            preparedStatement.setString(2, title);
+            preparedStatement.setString(3, director);
+            preparedStatement.setInt(4, releaseyear);
+            preparedStatement.setString(5, genre);
+            
+
+            int updated = preparedStatement.executeUpdate();
+            PrintWriter writer = resp.getWriter();
+
+            if(updated > 0) {
+                writer.write("<html><body>");
+                writer.write("<h1>Movie registration successful</h1>");
+                writer.write("</body></html>");
+            } else {
+                writer.write("<html><body>");
+                writer.write("<h1>Movie registration failed</h1>");
+                writer.write("</body></html>");
+            }
+
+            preparedStatement.close();
+            connection.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+	}
+	
+
+}
+
+
+
+
